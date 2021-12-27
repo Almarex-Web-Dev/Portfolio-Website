@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    --body-bg-color: #1d1d1d;
+    --text-white: #fff;
+    --logo-color:#CC6C06;
+     font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", 
+   "Oxygen","Ubuntu","Helvetica Neue", Arial, sans-serif; 
+
+    background: var(--body-bg-color);
+}
+header{
+    border-bottom: 1px solid rgb(59, 58, 58);
+    background: var(--body-bg-color);
+    height: auto;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+.nav-center{
+    width: 90%;
+    margin: auto;
+}
+nav{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* toggle btn starts here */
+.toggle-icon .fas{
+    font-size: 2rem;
+    padding: 10px;
+    /* background: rgb(24, 23, 23); */
+    color: #fff;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.toggle-icon .fas:hover{
+    transform: scale(0.8) rotate(-45deg);
+    transition: all .3s linear;
+}
+.toggle-icon .times{
+    display: none;
+}
+
+/* toggle btn ends here */
+.links-container{
+    height: 0;
+    overflow: hidden;
+    transition: all .8s linear;
+}
+ul.nav-links{
+    list-style: none; 
+}
+ul.nav-links li{
+    padding: 1rem 0;
+    text-align: center;
+}
+ul.nav-links li a{
+    text-decoration: none;
+    color: #adabab;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+ul.nav-links li a:hover{
+    color: var(--logo-color);
+}
+.active{
+    font-size: 1.2rem;
+    color: #CC6C06;
+}
+.social-icons{
+    text-align: center;
+}
+.social-icons .fab{
+    margin: 35px 10px;
+    font-size: 1.5rem;
+    color: rgb(17, 16, 16);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.social-icons .fab:hover{
+    color: var(--logo-color);
+}
+.resume{
+    text-decoration: none;
+    color: var(--logo-color);
+    padding: 10px 30px;
+    border: 1px solid var(--logo-color);
+    display: none;
+    transition: .3s linear all;
+}
+.resume:hover{
+    transform: scale(0.8);
+    background: var(--logo-color);
+    color: var(--body-bg-color);
+}
+/* about desc section */
+ .section-1{
+    position: relative;
+}
+.container{
+    height: 100vh;
+    width: 88%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.about-desc{
+    font-family: 'Opens sans', sans-serif;
+    margin-top: 100px;
+}
+.about-desc h2{
+    width: 200px;
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 3px;
+}
+.about-desc #name{
+    max-width: 600px;
+    font-size: 6rem;
+    color: #CC6C06;
+}
+.about-desc #job{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #fff;
+}
+.about-desc p{
+    width: 300px;
+    margin: 30px 0;
+    color: #CC6C06;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 14px;
+}
+/* contact me button */
+.contact-button{
+    margin: 25px 0 15px;
+    text-decoration: none;
+    color: #CC6C06;
+    width: 100%;
+    max-width: 220px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    position: relative;
+    letter-spacing: 3px;
+}
+.contact-button div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.contact-button:hover div{
+    transform: scale(0.9);
+}
+.contact-button span.bg{
+    background: #CC6C06;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: -5%;
+    top: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: skewX(-19deg);
+    -ms-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+}
+.contact-button:hover span.bg{
+    width: 110%;  
+}
+.contact-button span.base{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 1px solid #CC6C06;
+}
+.contact-button span.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.contact-button:hover span.text{
+    color: #1d1d1d;
+}
+.hero-img img{
+    width: 35%;
+    height: auto;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    display: none;
+}
+.icons {
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    display: none;
+}
+.icons a{
+    text-decoration: none;
+}
+.icons .fab{
+    display: block;
+    font-size: 1rem;
+    color: #3a3939;
+    margin-bottom: 30px;
+}
+.icons .fab:hover{
+    color: var(--logo-color);
+}
+/* Achievement section */
+.achievement{
+    display: flex;
+}
+.achievement h1{
+    font-size: 4.5rem;
+    color: #3a3939;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.ach{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.ach span{
+    color: var(--logo-color);
+}
+.logo-animation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    overflow: hidden;
+    z-index: -2;
+}
+.logo-animation li{
+    position: absolute;
+    bottom: -150px;
+    background: #d3720b57;
+    width: 30px;
+    height: 30px; 
+    animation: square 15s infinite;
+    transition-timing-function: linear;
+    /* border-radius: 50%; */
+}
+.logo-animation li:nth-child(1){
+    left: 15%;
+}
+.logo-animation li:nth-child(2){
+    left : 50%;
+    animation-delay: 7s;
+    animation-duration: 45s;
+}
+.logo-animation li:nth-child(3){
+    left: 25%;
+    animation-delay: 4s;
+    animation-duration: 15s;
+}
+.logo-animation li:nth-child(4){
+    left: 10%;
+    animation-delay: 7s;
+    animation-duration: 10s;
+}
+.logo-animation li:nth-child(5){
+    left: 35%;
+    animation-delay: 5s;
+    animation-duration: 12s;
+}
+.logo-animation li:nth-child(6){
+    left: 45%;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+
+@keyframes square {
+    0%{
+        opacity: 0;
+        transform: translateY(0) rotate(-45deg);
+    }
+    100%{
+        opacity: 0.5;
+        transform: translateY(-1100px) rotate(-45deg);
+    }
+}
+
+
+
+
+
+
+/* media query */ /* media query */ /* media query */
+
+@media screen and (min-width: 800px) {
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-center{
+        max-width: 1190px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .links-container {
+        height: auto !important;
+    }
+    ul.nav-links{
+        display: flex;
+        height: auto;
+    }
+    ul.nav-links li{
+        padding: 0;
+        width: 100px;
+    }
+    .toggle-icon{
+        display: none;
+    }
+    .resume{
+        display: block;
+    }
+    .social-icons{
+        display: none;
+    }
+    .icons{
+        display: block;
+    }
+    .hero-img img{
+        display: block;
+    }
+   
+} 
+
+
+/* work on the container when you come back */
+
+
+@media screen and (min-width: 0) and (max-width: 500px){
+    .about-desc h2{
+        font-size: 3rem;
+    }
+    .about-desc #name{
+        max-width: 400px;
+        font-size: 3rem;
+    }
+    .about-desc #job{
+        font-size: 1.5rem;
+    }
+    .contact-button{
+        max-width: 190px;
+    }
+    .achievement h1{
+        font-size: 2.5rem;
+    }
+    .ach{
+        width: 150px;
+    }
+    .ach span{
+        font-size: 14px;
+    }
+    .about-desc img{
+        width: 50px;
+        height: auto;
+    }
+  
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+    .about-desc h2{
+        font-size: 2.7rem;
+    }
+    .about-desc #name{
+        font-size: 4rem;
+    }
+    .about-desc #job{
+        font-size: 2rem;
+    }
+    .achievement h1{
+        font-size: 3rem;
+    }
+    .ach{
+        width: 150px;
+    }
+    .about-desc img{
+        width: 50px;
+        height: auto;
+    }
+    
+}
